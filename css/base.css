@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+html,
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+input,
+table,
+select,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+th,
+td,
+button,
+p,
+a,
+header,
+section,
+aside,
+footer,
+img {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+button,
+input {
+  outline: 0;
+  border: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+textarea {
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+i {
+  font-style: normal;
+}
+
+body {
+  font-family: "Padauk";
+}
+
+.font-blod {
+  font-weight: 700;
+}
+
+.swiper1 {
+  position: relative;
+}
+
+.swiper1 .swiper-pagination-bullets {
+  bottom: 12px;
+}
+
+.swiper1 .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+  opacity: 0.3;
+}
+
+.swiper1 .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.scroll {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  
+  width: 14px;
+  /*Size of scrollbar*/
+  height: 1px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+
+  background: rgba(0, 213, 255, 0.2);
+  border: 1px solid #00aaff;
+}
+
+.scroll::-webkit-scrollbar-track {
+
+  border-radius: 0;
+  background: rgba(0, 213, 255, 0.2);
+}
+
+
+input::-webkit-input-placeholder {
+  color: #c2c2c2;
+  font-size: 14px;
+}
+
+
+input:-moz-placeholder {
+  color: #c2c2c2;
+  font-size: 14px;
+}
+
+
+input:-ms-input-placeholder {
+  color: #c2c2c2;
+  font-size: 14px;
+}
+
+.u-main-color {
+  color: #333;
+}
+
+.u-content-color {
+  color: #666;
+}
+
+.u-tips-color {
+  color: #999;
+}
+/*# sourceMappingURL=base.css.map */

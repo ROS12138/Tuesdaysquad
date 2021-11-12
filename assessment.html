@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/uview.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap u-flex u-row-between u-p-l-15 u-p-r-15">
+        <span class="u-font-18 u-main-color blod">Assessment</span>
+        <span class="btn">skip</span>
+      </div>
+    </header>
+    <section class="accessment-select-box">
+      <label>Occupation</label>
+      <select name="Occupation" id=""></select>
+      <label>Visa Type</label>
+      <select name="visa" id=""></select>
+      <label>Salary(per hour)</label>
+      <input
+        id="salary"
+        name="salary"
+        type="number"
+        required
+        placeholder="Salary(per hour)"
+      />
+      <label>How many hours are you working per week?</label>
+      <input
+        name="hours"
+        type="number"
+        required
+        placeholder="Hours(you working per week)"
+      />
+    </section>
+    <section class="accessment-problem-box bluebgbox">
+      <div class="item">
+        <p>
+          Do you think you are being bullied/harassed/ dicrimated against in
+          workplace?
+        </p>
+        <div class="u-flex">
+          <input id="p1y" type="radio" name="problem1" value="1" />
+          <label for="p1y">Yes</label>
+          <input id="p1n" type="radio" name="problem1" value="2" />
+          <label for="p1n">No</label>
+          <input id="p1ns" type="radio" name="problem1" value="3" />
+          <label for="p1ns">Not Sure</label>
+        </div>
+      </div>
+      <div class="item">
+        <p>Do you think you are working under a uncomfortable Enviromemt?</p>
+        <div class="u-flex">
+          <input id="p2y" type="radio" name="problem2" value="1" />
+          <label for="p2y">Yes</label>
+          <input id="p2n" type="radio" name="problem2" value="2" />
+          <label for="p2n">No</label>
+          <input id="p2ns" type="radio" name="problem2" value="3" />
+          <label for="p2ns">Not Sure</label>
+        </div>
+      </div>
+      <div class="item">
+        <p>
+          Do you think you have a unpleasant relationship with your employer or
+          other employees?
+        </p>
+        <div class="u-flex">
+          <input id="p3y" type="radio" name="problem3" value="1" />
+          <label for="p3y">Yes</label>
+          <input id="p3n" type="radio" name="problem3" value="2" />
+          <label for="p3n">No</label>
+          <input id="p3ns" type="radio" name="problem3" value="3" />
+          <label for="p3ns">Not Sure</label>
+        </div>
+      </div>
+      <div class="item">
+        <p>Have you ever received any unfair treatment in workplace?</p>
+        <div class="u-flex">
+          <input id="p4y" type="radio" name="problem4" value="1" />
+          <label for="p4y">Yes</label>
+          <input id="p4n" type="radio" name="problem4" value="2" />
+          <label for="p4n">No</label>
+          <input id="p4ns" type="radio" name="problem4" value="3" />
+          <label for="p4ns">Not Sure</label>
+        </div>
+      </div>
+      <input class="btn-yellow" id="submit" type="submit" value="Submit" />
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/data.js"></script>
+
+    <script>
+      $(function () {
+        // Occupation default
+        workList.forEach((item) => {
+          let html = `<option value="${item.value}">${item.name}</option>`;
+          $("select[name='Occupation']").append(html);
+        });
+        // visa default
+        visaList.forEach((item) => {
+          let html = `<option value="${item.value}">${item.name}</option>`;
+          $("select[name='visa']").append(html);
+        });
+        // Send to next page
+        $("#submit").click(function () {
+          let Occupation = $("select[name='Occupation']").val();
+          let visa = $("select[name='visa']").val();
+          let salary = $("input[name='salary']").val();
+          let hours = $("input[name='hours']").val();
+          let problem1 = $("input[name='problem1']:checked").val();
+          let problem2 = $("input[name='problem2']:checked").val();
+          let problem3 = $("input[name='problem3']:checked").val();
+          let problem4 = $("input[name='problem4']:checked").val();
+          if (
+            Occupation == "" ||
+            visa == "" ||
+            salary == "" ||
+            hours == "" ||
+            problem1 == "" ||
+            problem2 == "" ||
+            problem3 == "" ||
+            problem4 == ""
+          ) {
+            alert("Some things are empty！");
+          } else {
+            window.location.href = `./result.html?Occupation=${Occupation}&visa=${visa}&salary=${salary}&hours=${hours}&problem1=${problem1}&problem2=${problem2}&problem3=${problem3}&problem4=${problem4}`;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

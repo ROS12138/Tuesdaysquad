@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/uview.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap u-flex u-row-center">
+        <i class="icon-arrow-left u-abso"></i>
+        <h2>User A</h2>
+      </div>
+    </header>
+    <section class="chat-wrap">
+      <div class="item">
+        <div class="time u-text-center">19:44 pm</div>
+        <div class="con u-flex u-m-t-15">
+          <i class="avatar"></i>
+          <span>what do i have to prepare for a Working Visa？</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="time u-text-center">19:44 pm</div>
+        <div class="con u-flex u-m-t-15">
+          <i class="avatar"></i>
+          <span>what do i have to prepare for a Working Visa？</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="time u-text-center">19:44 pm</div>
+        <div class="con u-flex u-m-t-15">
+          <i class="avatar"></i>
+          <span>what do i have to prepare for a Working Visa？</span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap u-flex u-row-between">
+        <input type="text" placeholder="Type your message" />
+        <button id="send"><i class="icon-send"></i></button>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+
+    <script>
+      $(function () {
+        // Press to send
+        $("#send").click(function () {
+          let text = $("input").val();
+          let html = `
+          <div class="item">
+        <div class="time u-text-center">19:44 pm</div>
+        <div class="con u-flex u-m-t-15">
+          <i class="avatar"></i>
+          <span>${text}</span>
+        </div>
+      </div>
+      `;
+          if (text != "") {
+            $(".chat-wrap").append(html);
+            let lastItemHeight = $(".chat-wrap .item:last-of-type").height();
+            $("input").val("");
+            let scrolltop = $(".chat-wrap").scrollTop();
+            $(".chat-wrap").scrollTop(scrolltop + lastItemHeight + 50);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

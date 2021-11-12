@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/uview.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrap u-flex u-row-center">
+        <i class="icon-arrow-left u-abso" id="back"></i>
+        <h2>Result</h2>
+      </div>
+    </header>
+    <!-- Option result -->
+    <section class="result-select-box">
+      <div class="u-flex u-row-between">
+        <label>Occupation</label>
+        <span id="work"></span>
+      </div>
+      <div class="u-m-t-30">
+        <label>Visa Type</label>
+        <div class="box-wbg u-m-t-15 u-tips-color u-font-12" id="visa"></div>
+      </div>
+      <div class="u-m-t-30">
+        <div class="u-flex u-row-between">
+          <label>Salary（per hour）</label>
+          <span id="salary"></span>
+        </div>
+        <div class="salary-line u-rela box-wbg u-m-t-15 u-flex u-row-center">
+          <div class="redbox"></div>
+          <div class="bluebox u-rela u-flex u-row-between">
+            <div class="line1"><span id="low"></span></div>
+            <div class="line2">
+              <!-- <div class="dot"></div> -->
+              <span id="median"></span>
+            </div>
+            <div class="line1"><span id="high"></span></div>
+          </div>
+          <div class="greenbox"></div>
+          <div class="dot cur"><span id="cursalary"></span></div>
+        </div>
+        <div class="salary-success u-flex u-m-t-15">
+          <div class="success u-m-r-15"><i class="icon"></i></div>
+          <span class="u-font-12 u-tips-color u-flex-1"
+            > You salary belongs in a reasonable range</span
+          >
+        </div>
+        <div class="salary-err u-flex u-m-t-15">
+          <div class="err u-m-r-15"><i class="icon"></i></div>
+          <span class="u-font-12 u-tips-color u-flex-1"
+            >You are currently under paid.
+            <!-- Link -->
+            <a class="blue" href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=121%3A364&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A285">Press here for more detail</a>
+          </span>
+        </div>
+        
+      </div>
+      <div class="u-m-t-30 u-flex u-row-between">
+        <label>Weekly hours</label>
+        <span id="hours"></span>
+      </div>
+      <div class="hours-success u-flex u-m-t-15">
+        <div class="success u-m-r-15"><i class="icon"></i></div>
+        <span class="u-font-12 u-tips-color u-flex-1"
+          >your working hour passed our visa check</span
+        >
+      </div>
+      <div class="hours-err u-flex u-m-t-15">
+        <div class="err u-m-r-15"><i class="icon"></i></div>
+        <span class="u-font-12 u-tips-color u-flex-1"
+          >You have excessed the maximum weekly hours. Penalty and fine will be imposed on you. <a class="blue" href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=121%3A364&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A285">Press here for more detail</a></span
+        >
+      </div>
+      <!-- Working hour > 38 -->
+      <div class="hours-err2 u-flex u-m-t-15">
+        <div class="err u-m-r-15"><i class="icon"></i></div>
+        <span class="u-font-12 u-tips-color u-flex-1"
+          >You have excessed the maximum weekly hours. Penalty and fine will be imposed on you. <a class="blue" href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=121%3A364&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A285">Press here for more detail</a>
+        </span>
+      </div>
+    </section>
+    <div class="result-problem-box bluebgbox">
+      <!-- First Question -->
+      <div class="item" id="p1-answer">
+        <p>
+          Do you think you are being bullied/harassed/ dicrimated against in
+          workplace?
+        </p>
+        <div class="u-flex u-row-between">
+          <label></label>
+          <div class="warn"></div>
+        </div>
+        <div class="content">
+      <!-- First Question - Answer No.1 -->
+          <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=132%3A384&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex u-m-t-15">
+            <div class="icon icon1"></div>
+            <span>Do you want learn more about workplace bullying ? </span>
+          </a>
+        
+        <div class="u-m-10 u-font-15 white u-text-center">or</div>
+      <!-- First Question - Answer No.2 -->
+        <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=243%3A5007&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex">
+          <div class="icon icon1"></div>
+          <span>Go to our forum and see if there is any other user who may feel the same
+          </span>
+        </a>
+      </div>
+      </div>
+      <!-- Second Question -->
+      <div class="item" id="p2-answer">
+        <p>
+          Do you think you are working under a uncomfortable Enviromemt?
+        </p>
+        <div class="u-flex u-row-between">
+          <label></label>
+          <div class="warn"></div>
+        </div>
+        <div class="content">
+      <!-- Second Question - Answer No.1 -->
+          <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=121%3A364&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex u-m-t-15">
+            <div class="icon icon1"></div>
+            <span>Do you want learn more about workplace environment ? </span>
+          </a>
+       
+        <div class="u-m-10 u-font-15 white u-text-center">or</div>
+      <!-- Second Question - Answer No.2 -->
+        <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=243%3A5007&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex">
+          <div class="icon icon1"></div>
+          <span>Go to our forum and see if there is any other user who may feel the same
+          </span>
+        </a>
+      </div>
+      </div>
+      <div class="item" id="p3-answer">
+        <p>
+          Do you think you have a unpleasant relationship with your employer or other employees?
+        </p>
+        <div class="u-flex u-row-between">
+          <label></label>
+          <div class="warn"></div>
+        </div>
+        <div class="content">
+      <!-- Third Question - Answer No.1 -->
+          <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=95%3A451&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex u-m-t-15">
+            <div class="icon icon1"></div>
+            <span>Do you want learn more about workplace relationship ? </span>
+          </a>
+          <div class="u-m-10 u-font-15 white u-text-center">or</div>
+      <!-- Third Question - Answer No.2 -->
+          <a href="https://www.figma.com/file/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=243%3A5007" class="box-wbg u-flex">
+            <div class="icon icon1"></div>
+            <span>Go to our forum and see if there is any other user who may feel the same</span>
+          </a>
+        </div>
+      </div>
+      <div class="item" id="p4-answer">
+        <p>
+          Have you ever received any unfair treatment in workplace?
+        </p>
+        <div class="u-flex u-row-between">
+          <label></label>
+          <div class="warn"></div>
+        </div>
+        <div class="content">
+      <!-- Fourth Question - Answer No.1 -->
+          <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=132%3A265&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex u-m-t-15">
+            <div class="icon icon1"></div>
+            <span>Do you want learn more about workplace discrimation ? </span>
+          </a>
+        
+        <div class="u-m-10 u-font-15 white u-text-center">or</div>
+      <!-- Fourth Question - Answer No.2 -->
+        <a href="https://www.figma.com/proto/cxdby50Rfq6qEWoKjN5lLF/Untitled?node-id=406%3A7964&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A25&show-proto-sidebar=1" class="box-wbg u-flex">
+          <div class="icon icon1"></div>
+          <span>Go to our forum and see if there is any other user who may feel the same
+          </span>
+        </a>
+      </div>
+      <button class="btn-white">Done</button>
+      </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.form.min.js"></script>
+
+    <script src="layui/layui.js"></script>
+    <script src="js/data.js"></script>
+
+    <script>
+      $(function () {
+        $("#back").click(function () {
+          history.back();
+        });
+        $("#work").text(Occupation);
+        $("#visa").text(visa);
+        $("#salary").text("$" + salary + "/H");
+        $("#low").text("$" + low + "/H");
+        $("#high").text("$" + high + "/H");
+        $("#median").text("$" + median + "/H");
+        $("#cursalary").text("$" + salary + "/H");
+        $("#hours").text(hours);
+        $("#p1-answer label").text(problem1);
+        $("#p2-answer label").text(problem2);
+        $("#p3-answer label").text(problem3);
+        $("#p4-answer label").text(problem4);
+      
+      });
+      let params = new URLSearchParams(location.search);
+      let [
+        Occupation,
+        visa,
+        salary,
+        hours,
+        problem1,
+        problem2,
+        problem3,
+        problem4,
+      ] = [
+        params.get("Occupation"),
+        params.get("visa"),
+        params.get("salary"),
+        params.get("hours"),
+        params.get("problem1"),
+        params.get("problem2"),
+        params.get("problem3"),
+        params.get("problem4"),
+      ];
+      let high;
+      let low;
+      let median;
+      let percentM; //Average Percent
+      let percentC; //Input Percent
+      let MaxHours; 
+ // Show anwsers
+ function getAnswerView(name, value,obj){
+      switch (value){
+        case "1":
+          $(obj).find("label").removeClass("no");
+          $(obj).find("label").removeClass("not");
+          $(obj).find(".warn").css("display",'block');
+          $(obj).find(".content").css("display",'block');
+          break;
+          case "2":
+          $(obj).find("label").addClass("no");
+          $(obj).find("label").removeClass("not");
+          $(obj).find(".warn").css("display",'none');
+          $(obj).find(".content").css("display",'none');
+          break;
+          case "3":
+          $(obj).find("label").addClass("not");
+          $(obj).find("label").removeClass("no");
+          $(obj).find("label").css("display",'block');
+          $(obj).find(".warn").css("display",'block');
+          $(obj).find(".content").css("display",'block');
+          break;
+          default:
+          $(obj).find("label").css("display",'none');
+          $(obj).find(".warn").css("display",'none');
+          $(obj).find(".content").css("display",'none');
+      }
+      }
+      function getName(name, value) {
+        if (name == "problem1") {
+          switch (value) {
+            case "1":
+              problem1 = "Yes";
+              break;
+            case "2":
+              problem1 = "No";
+              break;
+            case "3":
+              problem1 = "Not Sure";
+          }
+          getAnswerView(name,value,"#p1-answer")
+        }
+        if (name == "problem2") {
+          switch (value) {
+            case "1":
+              problem2 = "Yes";
+              break;
+            case "2":
+              problem2 = "No";
+              break;
+            case "3":
+              problem2 = "Not Sure";
+          }
+          getAnswerView(name,value,"#p2-answer")
+        }
+        if (name == "problem3") {
+          switch (value) {
+            case "1":
+              problem3 = "Yes";
+              break;
+            case "2":
+              problem3 = "No";
+              break;
+            case "3":
+              problem3 = "Not Sure";
+          }
+          getAnswerView(name,value,"#p3-answer")
+        }
+        if (name == "problem4") {
+          switch (value) {
+            case "1":
+              problem4 = "Yes";
+              break;
+            case "2":
+              problem4 = "No";
+              break;
+            case "3":
+              problem4 = "Not Sure";
+          }
+          getAnswerView(name,value,"#p4-answer")
+        }
+        if (name == "Occupation") {
+          workList.forEach((item) => {
+            if (value == item.value) {
+              Occupation = item.name;
+              high = item.high;
+              low = item.low;
+              median = item.median;
+              percentM = (median - low) / (high - low);
+              $(".line2").css("left", percentM * 100 + "%");
+            }
+          });
+        }
+        if (name == "visa") {
+          visaList.forEach((item) => {
+            if (value == item.value) {
+              visa = item.name;
+              MaxHours=item.hours
+            }
+            
+          });
+        }
+        if (name == "salary") {
+          if (value == "") {
+            salary = "?";
+          }
+          if (low <= value <= high) {
+            percentC = (value - low) / (high - low);
+            $(".cur").css("left", percentC * 100 + "%");
+            $(".cur").addClass("yellow");
+            $(".bluebox").append($(".cur"));
+            $(".salary-success").css("display",'flex');
+            $(".salary-err").css("display",'none');
+
+          }
+          if (value <= low) {
+            $(".redbox").append($(".cur"));
+            $(".redbox").css("display", "block");
+            $(".cur").css("left", "30%");
+            $(".cur").addClass("red");
+            $(".cur").removeClass("yellow");
+            $(".salary-err").css("display",'flex');
+            $(".salary-success").css("display",'none');
+
+          }
+          if (value >= high) {
+            $(".greenbox").append($(".cur"));
+            $(".greenbox").css("display", "block");
+            $(".cur").css("left", "30%");
+            $(".cur").removeClass("red");
+            $(".cur").removeClass("yellow");
+            $(".salary-success").css("display",'flex');
+            $(".salary-err").css("display",'none');
+
+
+          }
+        }
+        if (name == "hours") {
+          if (value == "") {
+            hours = "?";
+          }
+          if(value<=MaxHours){
+            // console.log(value,MaxHours,"Smaller");
+            $(".hours-err").css("display",'none');
+            $(".hours-err2").css("display",'none');
+          $(".hours-success").css("display",'flex');
+            
+         }
+         else if(value<38){
+          // console.log(value,MaxHours,"Greater");
+
+          $(".hours-success").css("display",'none');
+          $(".hours-err2").css("display",'none');
+            $(".hours-err").css("display",'flex');
+         }
+         else {
+          // console.log(value,MaxHours,"Greater than 38");
+
+          $(".hours-success").css("display",'none');
+          $(".hours-err").css("display",'none');
+          $(".hours-err2").css("display",'flex');
+         }
+
+        }
+      }
+      getName("Occupation", Occupation);
+      getName("visa", visa);
+      getName("salary", salary);
+      getName("hours", hours);
+      getName("problem1", problem1);
+      getName("problem2", problem2);
+      getName("problem3", problem3);
+      getName("problem4", problem4);
+     
+     
+     
+      // console.log(
+      //   Occupation,
+      //   visa,
+      //   salary,
+      //   hours,
+      //   problem1,
+      //   problem2,
+      //   problem3,
+      //   problem4,
+      //   high,
+      //   low,
+      //   median
+      // ); // 2f6339
+    </script>
+  </body>
+</html>
